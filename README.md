@@ -1,4 +1,4 @@
-# MeowLoader <img width="128" height="128" alt="Logo" src="https://github.com/user-attachments/assets/377e14c4-242d-4b19-9b83-a9042b501116" />
+# MeowLoader <img width="96" height="96" alt="Logo" src="https://github.com/user-attachments/assets/377e14c4-242d-4b19-9b83-a9042b501116" />
 
 ### MeowLoader is a plugin loader built in C++
 <img width="577" height="428" alt="image" src="https://github.com/user-attachments/assets/6e9d89e8-08ae-4b5f-911b-3e8fe507a7a7" />
