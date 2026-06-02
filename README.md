@@ -14,7 +14,8 @@
 
 ### C++
 Below is a very simple C++ plugin which logs when it loads and when it is unloaded
-```#include "pch.h"
+```
+#include "pch.h"
 #include "MeowPlugin.h"
 
 class PluginTemplate : public MeowPlugin
@@ -52,4 +53,5 @@ extern "C" __declspec(dllexport)
 MeowPlugin* CreatePlugin()
 {
     return new PluginTemplate();
-}```
+}
+```
