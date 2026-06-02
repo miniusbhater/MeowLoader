@@ -2,7 +2,7 @@
 
 
 ### MeowLoader is a plugin loader built in C++
-<img width="577" height="428" alt="image" src="https://github.com/user-attachments/assets/6e9d89e8-08ae-4b5f-911b-3e8fe507a7a7" />
+<img width="566" height="413" alt="image" src="https://github.com/user-attachments/assets/82e55f22-c1c9-4b5b-8bfb-72aa2c215456" />
 
 #### Supported languages:
  - C
