@@ -12,6 +12,22 @@
  - Rust
  - Anything that compiles to a native DLL and can export a C ABI function
 
+   
+## Using MeowLoader
+<details>
+  <summary><b>Injecting</b></summary>
+
+  Open MeowInjector.exe and then enter the process name of any running program (without .exe on the end)
+
+  If it was successful you should be presented with the MeowLoader window and see this in the injector
+  <img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/f0c85c18-b595-45af-a652-c7ec7424e0e3" />
+
+  
+
+  </details>
+
+
+
 ## Creating plugins
 
 <details>
