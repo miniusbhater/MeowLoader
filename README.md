@@ -10,8 +10,6 @@
  - C# (With MeowSharpBridge)
  - C
  - Rust
- - Zig
- - D
  - Anything that compiles to a native DLL and can export a C ABI function
 
 ## Creating plugins
