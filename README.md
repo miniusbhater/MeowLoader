@@ -161,7 +161,7 @@ MeowPlugin* CreatePlugin()
 - All strings use UTF-16.
   </details>
 
-### Code Templates
+#### Code Templates
 <details>
   <summary><b>C++</b></summary>
 
