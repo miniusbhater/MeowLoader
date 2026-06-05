@@ -70,6 +70,24 @@ Plugins can also be Enabled, Disabled, Unloaded and Reloaded by clicking the **P
   </details>
 
 
+<details>
+  <summary><b>Errors</b></summary>
+
+  | Error | Meaning |
+|----------|-------------|
+| `No plugins found` | No plugins were found in the `Plugins` folder |
+| `Already loaded` | The plugin you attempted to load is already loaded |
+| `Missing CreatePlugin export` | The plugin that tried to load is missing its CreatePlugin export |
+| `Failed to load plugin` | The plugin that tried to load failed |
+| `Invalid plugin` | The plugin that tried to load is missing its metadata |
+| `Cannot reload: source path unknown` | The plugin that tried to reload no longer exists in its original directory |
+| `Exeption in OnLoad` | The plugin that tried to load has an issue in its OnLoad method |
+| `Exeption in OnTick` | The plugin that tried to load has an issue in its OnTick method |
+| `Exeption in OnShutdown` | The plugin that tried to load has an issue in its OnShutdown method |
+| `Exeption in OnEnable` | The plugin that tried to load has an issue in its OnEnable method |
+| `Exeption in OnDisable` | The plugin that tried to load has an issue in its OnDisable method |
+
+  </details>
 
 
 ## Creating plugins
