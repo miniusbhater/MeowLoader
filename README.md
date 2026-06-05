@@ -51,6 +51,64 @@
 ## Creating plugins
 
 <details>
+  <summary><b>Basic info</b></summary>
+
+  #### Lifecycle methods:
+  OnLoad()          Called when the plugin is loaded
+  OnTick()          Called every 16ms
+  OnEnable()        Called when the plugin is enabled with the enable button
+  OnDisable()       Called when the plugin is disabled with the disable button
+  OnShutdown()      Called when the plugin is unloaded
+
+  #### Plugin info
+  Every plugin must provide metadata through a PluginInfo structure.
+  Example (C++):
+  ```
+PluginInfo infoData =
+    {
+        L"My Plugin",         // name
+        L"1.0.0",             // version
+        L"MeowLoader Plugin"  // description
+    };
+```
+
+  #### Logging
+  Plugins can write messages to the log.
+  Example (C++):
+  ```LogMsg(L"This is a log :3")```
+
+  #### Creating a plugin
+  Create a class that derives from `MeowPlugin`.
+  Example (C++):
+  ```
+  class MyPlugin : public MeowPlugin
+{
+public:
+    void OnLoad() override
+    {
+       
+    }
+};
+  ```
+
+Export a factory function.
+Example (C++):
+```
+extern "C" __declspec(dllexport)
+MeowPlugin* CreatePlugin()
+{
+    return new MyPlugin();
+}
+```
+
+#### Final notes
+- Plugins must export `CreatePlugin()`.
+- All strings use UTF-16.
+
+  </details>
+
+### Code Templates
+<details>
   <summary><b>C++</b></summary>
 
 Below is a very simple C++ plugin which logs when it is loaded and when it is unloaded
