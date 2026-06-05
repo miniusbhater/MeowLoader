@@ -16,7 +16,7 @@
 ## Creating plugins
 
 <details>
-# <summary>### C++</summary>
+# <summary><strong>C++</strong></summary>
 
 Below is a very simple C++ plugin which logs when it is loaded and when it is unloaded
 ```
