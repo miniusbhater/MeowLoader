@@ -32,7 +32,7 @@
 <details>
   <summary><b>Loading plugins</b></summary>
   
- Plugins can be placed inside the "Plugins" folder located in the same directory as MeowInjector.exe. If a plugin is placed here MeowLoader will automatically attempt to load it and you should be able to see it's name, title and description in the log. You can have as many plugins as you want inside of the plugins   folder.
+ Plugins can be placed inside the "Plugins" folder - located in the same directory as MeowInjector.exe. If a plugin is placed here MeowLoader will automatically attempt to load it and you should be able to see it's name, title and description in the log. You can have as many plugins as you want inside of the plugins   folder.
 
   You can also load plugins after MeowLoader is injected by clicking "Load Plugin" in MeowLoader and then selecting the plugin in the file explorer window that pops up.
 
