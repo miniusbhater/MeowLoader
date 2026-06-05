@@ -27,10 +27,11 @@ class PluginTemplate : public MeowPlugin
 public:
     PluginInfo infoData =
     {
-        L"My Plugin",                 // name
-        L"1.0.0",                     // version
-        L"MeowLoader Plugin Template" // description
+        L"My Plugin",         // name
+        L"1.0.0",             // version
+        L"MeowLoader Plugin"  // description
     };
+
 
     PluginTemplate()
     {
@@ -39,18 +40,29 @@ public:
 
     void OnLoad() override
     {
-        LogMsg(L"Plugin loaded");           
+        // code here runs when the plugin is loaded    
     }
 
     void OnTick() override
     {
-      
+      // code here runs every tick
+    }
+
+    void OnEnable() override
+    {
+        // code here runs when the plugin is enabled
+    }
+
+    void OnDisable() override
+    {
+        // code here runs when the plugin is disabled
     }
 
     void OnShutdown() override
-    {    
-        LogMsg(L"Shutdown received");
+    {     
+        // code here runs when the plugin is unloaded
     }
+  
 };
 
 extern "C" __declspec(dllexport)
