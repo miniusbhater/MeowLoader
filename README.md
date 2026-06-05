@@ -7,7 +7,6 @@
 
 #### Supported plugin languages:
  - C++
- - C# (With MeowSharpBridge)
  - C
  - Rust
  - Anything that compiles to a native DLL and can export a C ABI function
