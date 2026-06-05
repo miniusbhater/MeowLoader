@@ -70,6 +70,7 @@ MeowPlugin* CreatePlugin()
 {
     return new PluginTemplate();
 }
-'''
+
+```
 </details>
 
