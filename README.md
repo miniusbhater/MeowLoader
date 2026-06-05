@@ -16,15 +16,29 @@
 <details>
   <summary><b>Injecting</b></summary>
 
-  Open MeowInjector.exe and then enter the executable name of any running program (without .exe on the end)
+  ## Injecting MeowLoader
 
-  If it was successful you should be presented with the MeowLoader window and see this in the injector
-  
-  <img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/f0c85c18-b595-45af-a652-c7ec7424e0e3" />
+Open `MeowInjector.exe` and then enter the executable name of any running program (without `.exe` on the end).
 
-  However, if you enter a program that isn't running or enter the incorrect executable name which in this case "obs" was entered instead of "obs64" then use task manager -> find the program -> right click it -> open file location and then use the name it gives you there
+If it was successful you should be presented with the MeowLoader window and see this in the injector:
 
-  <img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/bea068e1-75fa-47bb-8942-33286a7f47ac" />
+<img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/f0c85c18-b595-45af-a652-c7ec7424e0e3" />
+
+## Troubleshooting
+
+If you enter a program that isn't running or enter the incorrect executable name, the injection will fail.
+
+For example, in this case `obs` was entered instead of `obs64`.
+
+To find the correct executable name:
+
+1. Open **Task Manager**.
+2. Find the program you want to inject into.
+3. Right-click the program.
+4. Click **Open file location**.
+5. Use the executable name shown there (without the `.exe` extension).
+
+<img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/bea068e1-75fa-47bb-8942-33286a7f47ac" />
 
 </details>
 
