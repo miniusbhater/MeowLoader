@@ -20,6 +20,7 @@
   Open MeowInjector.exe and then enter the executable name of any running program (without .exe on the end)
 
   If it was successful you should be presented with the MeowLoader window and see this in the injector
+  
   <img width="565" height="322.5" alt="image" src="https://github.com/user-attachments/assets/f0c85c18-b595-45af-a652-c7ec7424e0e3" />
 
   However, if you enter a program that isn't running or enter the incorrect executable name which in this case "obs" was entered instead of "obs64" then use task manager -> find the program -> right click it -> open file location and then use the name it gives you there
