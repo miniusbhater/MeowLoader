@@ -53,17 +53,22 @@
 <details>
   <summary><b>Basic info</b></summary>
 
-  #### Lifecycle methods:
-  `OnLoad()`          Called when the plugin is loaded  
-  `OnTick()`          Called every 16ms  
-  `OnEnable()`        Called when the plugin is enabled with the enable button  
-  `OnDisable()`       Called when the plugin is disabled with the disable button  
-  `OnShutdown()`      Called when the plugin is unloaded  
+ ## Lifecycle methods
 
-  #### Plugin info
-  Every plugin must provide metadata through a PluginInfo structure.  
-  Example (C++):  
-  ```
+| Method | Description |
+|----------|-------------|
+| `OnLoad()` | Called when the plugin is loaded |
+| `OnTick()` | Called every 16ms |
+| `OnEnable()` | Called when the plugin is enabled with the enable button |
+| `OnDisable()` | Called when the plugin is disabled with the disable button |
+| `OnShutdown()` | Called when the plugin is unloaded |
+
+## Plugin info
+
+Every plugin must provide metadata through a PluginInfo structure.  
+Example (C++):
+
+```cpp
 PluginInfo infoData =
     {
         L"My Plugin",         // name
@@ -72,28 +77,35 @@ PluginInfo infoData =
     };
 ```
 
-  #### Logging
-  Plugins can write messages to the log.  
-  Example (C++):  
-  ```LogMsg(L"This is a log :3")```
+## Logging
 
-  #### Creating a plugin
-  Create a class that derives from `MeowPlugin`.  
-  Example (C++):  
-  ```
-  class MyPlugin : public MeowPlugin
+Plugins can write messages to the log.  
+Example (C++):
+
+```cpp
+LogMsg(L"This is a log :3");
+```
+
+## Creating a plugin
+
+Create a class that derives from `MeowPlugin`.  
+Example (C++):
+
+```cpp
+class MyPlugin : public MeowPlugin
 {
 public:
     void OnLoad() override
     {
-       
+
     }
 };
-  ```
+```
 
 Export a factory function.  
-Example (C++):  
-```
+Example (C++):
+
+```cpp
 extern "C" __declspec(dllexport)
 MeowPlugin* CreatePlugin()
 {
@@ -101,10 +113,10 @@ MeowPlugin* CreatePlugin()
 }
 ```
 
-#### Final notes
+## Final notes
+
 - Plugins must export `CreatePlugin()`.
 - All strings use UTF-16.
-
   </details>
 
 ### Code Templates
