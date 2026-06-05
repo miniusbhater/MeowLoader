@@ -15,7 +15,56 @@
 
 ## Creating plugins
 
-### C++
+<details>
+  <summary>C++</summary>
+
+Below is a very simple C++ plugin which logs when it loads and when it is unloaded
+```
+#include "pch.h"
+#include "MeowPlugin.h"
+
+class PluginTemplate : public MeowPlugin
+{
+public:
+    PluginInfo infoData =
+    {
+        L"My Plugin",                 // name
+        L"1.0.0",                     // version
+        L"MeowLoader Plugin Template" // description
+    };
+
+    PluginTemplate()
+    {
+        info = &infoData;
+    }
+
+    void OnLoad() override
+    {
+        LogMsg(L"Plugin loaded");           
+    }
+
+    void OnTick() override
+    {
+      
+    }
+
+    void OnShutdown() override
+    {    
+        LogMsg(L"Shutdown received");
+    }
+};
+
+extern "C" __declspec(dllexport)
+MeowPlugin* CreatePlugin()
+{
+    return new PluginTemplate();
+}
+'''
+
+
+
+
+
 Below is a very simple C++ plugin which logs when it loads and when it is unloaded
 ```
 #include "pch.h"
