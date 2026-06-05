@@ -6,8 +6,9 @@
 <img width="579" height="427" alt="image" src="https://github.com/user-attachments/assets/f39a0066-2ad4-41a0-bb20-07efddf53dcb" />
 
 #### Supported languages:
- - C
  - C++
+ - C# (With MeowSharpBridge)
+ - C
  - Rust
  - Zig
  - D
