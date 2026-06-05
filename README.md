@@ -8,8 +8,7 @@
 #### Supported plugin languages:
  - C++
  - C
- - Rust
- - Anything that compiles to a native DLL and can export a C ABI function
+ - More very soon
 
    
 ## Using MeowLoader
