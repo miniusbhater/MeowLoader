@@ -61,8 +61,8 @@
   `OnShutdown()`      Called when the plugin is unloaded  
 
   #### Plugin info
-  Every plugin must provide metadata through a PluginInfo structure.
-  Example (C++):
+  Every plugin must provide metadata through a PluginInfo structure.  
+  Example (C++):  
   ```
 PluginInfo infoData =
     {
@@ -73,13 +73,13 @@ PluginInfo infoData =
 ```
 
   #### Logging
-  Plugins can write messages to the log.
-  Example (C++):
+  Plugins can write messages to the log.  
+  Example (C++):  
   ```LogMsg(L"This is a log :3")```
 
   #### Creating a plugin
-  Create a class that derives from `MeowPlugin`.
-  Example (C++):
+  Create a class that derives from `MeowPlugin`.  
+  Example (C++):  
   ```
   class MyPlugin : public MeowPlugin
 {
@@ -91,8 +91,8 @@ public:
 };
   ```
 
-Export a factory function.
-Example (C++):
+Export a factory function.  
+Example (C++):  
 ```
 extern "C" __declspec(dllexport)
 MeowPlugin* CreatePlugin()
