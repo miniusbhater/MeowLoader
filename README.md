@@ -54,11 +54,11 @@
   <summary><b>Basic info</b></summary>
 
   #### Lifecycle methods:
-  OnLoad()          Called when the plugin is loaded
-  OnTick()          Called every 16ms
-  OnEnable()        Called when the plugin is enabled with the enable button
-  OnDisable()       Called when the plugin is disabled with the disable button
-  OnShutdown()      Called when the plugin is unloaded
+  `OnLoad()`          Called when the plugin is loaded  
+  `OnTick()`          Called every 16ms  
+  `OnEnable()`        Called when the plugin is enabled with the enable button  
+  `OnDisable()`       Called when the plugin is disabled with the disable button  
+  `OnShutdown()`      Called when the plugin is unloaded  
 
   #### Plugin info
   Every plugin must provide metadata through a PluginInfo structure.
