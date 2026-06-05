@@ -31,17 +31,27 @@
 <details>
   <summary><b>Loading plugins</b></summary>
   
- Plugins can be placed inside the "Plugins" folder - located in the same directory as MeowInjector.exe. If a plugin is placed here MeowLoader will automatically attempt to load it and you should be able to see it's name, title and description in the log. You can have as many plugins as you want inside of the plugins   folder.
+## Loading Plugins
 
-  You can also load plugins after MeowLoader is injected by clicking "Load Plugin" in MeowLoader and then selecting the plugin in the file explorer window that pops up.
+Plugins can be placed inside the **Plugins** folder - located in the same directory as `MeowInjector.exe`.
 
-  Plugins that are loaded will log their info the the MeowLoader log and you should see something like this:
-  
-  <img width="275" height="163" alt="image" src="https://github.com/user-attachments/assets/699175e7-dd0f-40ad-ae79-531c295e34bc" />
+If a plugin is placed here MeowLoader will automatically attempt to load it and you should be able to see it's name, title and description in the log.
 
-  Plugins can also be Enabled, Disabled, Unloaded and Reloaded by clicking the Plugins tab then selecting the plugin you want.
- 
-  <img width="275" height="163" alt="image" src="https://github.com/user-attachments/assets/14c163dc-b3c2-4b0a-a419-0f84a83e5006" />
+You can have as many plugins as you want inside of the plugins folder.
+
+You can also load plugins after MeowLoader is injected by clicking **Load Plugin** in MeowLoader and then selecting the plugin in the file explorer window that pops up.
+
+## Loaded Plugins
+
+Plugins that are loaded will log their info the the MeowLoader log and you should see something like this:
+
+<img width="275" height="163" alt="image" src="https://github.com/user-attachments/assets/699175e7-dd0f-40ad-ae79-531c295e34bc" />
+
+## Managing Plugins
+
+Plugins can also be Enabled, Disabled, Unloaded and Reloaded by clicking the **Plugins** tab then selecting the plugin you want.
+
+<img width="275" height="163" alt="image" src="https://github.com/user-attachments/assets/14c163dc-b3c2-4b0a-a419-0f84a83e5006" />
 
   </details>
 
