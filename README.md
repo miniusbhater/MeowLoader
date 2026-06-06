@@ -175,7 +175,7 @@ MeowPlugin* CreatePlugin()
 
 ## Plugin info
 
-Every plugin must provide metadata through a PluginInfo structure.  
+Every plugin must provide metadata through a PluginInfoC structure.  
 Example:
 
 ```c
