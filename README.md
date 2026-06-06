@@ -92,7 +92,7 @@ Plugins can also be Enabled, Disabled, Unloaded and Reloaded by clicking the **P
 ## Creating plugins
 
 <details>
-  <summary><b>Basic info</b></summary>
+  <summary><b>Basic info (C++)</b></summary>
 
  ## Lifecycle methods
 
