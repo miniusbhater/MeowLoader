@@ -279,7 +279,6 @@ public:
         L"MeowLoader Plugin"  // description
     };
 
-
     PluginTemplate()
     {
         info = &infoData;
@@ -312,7 +311,8 @@ public:
   
 };
 
-extern "C" __declspec(dllexport)
+// factory function
+extern "C" __declspec(dllexport) 
 MeowPlugin* CreatePlugin()
 {
     return new PluginTemplate();
