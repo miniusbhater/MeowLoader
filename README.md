@@ -120,7 +120,7 @@ PluginInfo infoData =
 
 ## Logging
 
-Plugins can write messages to the log.  
+Plugins can write messages to the log.    
 Example:
 
 ```cpp
@@ -129,7 +129,7 @@ LogMsg(L"This is a log :3");
 
 ## Creating a plugin
 
-Create a class that derives from `MeowPlugin`.  
+Create a class that derives from `MeowPlugin`.    
 Example:
 
 ```cpp
@@ -175,7 +175,7 @@ MeowPlugin* CreatePlugin()
 
 ## Plugin info
 
-Every plugin must provide metadata through a PluginInfoC structure.  
+Every plugin must provide metadata through a PluginInfoC structure.    
 Example:
 
 ```c
@@ -189,9 +189,9 @@ PluginInfoC infoData =
 
 ## Logging
 
-Plugins can write messages to the log. 
+Plugins can write messages to the log.   
 ### Option 1
-Create a wrapper
+Create a wrapper  
 Example:
 
 ```c
@@ -203,7 +203,7 @@ static void LogMsg(const wchar_t* msg)
     }
 }
 ```
-Then you can do `LogMsg(L);` to create a log
+Then you can do `LogMsg(L);` to create a log  
 Example:
 ```c
 LogMsg(L"This is a log :3");
@@ -216,7 +216,7 @@ g_plugin.log(g_plugin.info->name, L"This is a log :3");
 
 ## Creating a plugin
 
-Plugins are implemnted as a single global instance of MeowPluginC
+Plugins are implemnted as a single global instance of MeowPluginC  
 Example :
 ```c
 #include "MeowPluginC.h"
