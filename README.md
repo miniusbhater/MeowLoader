@@ -317,7 +317,77 @@ MeowPlugin* CreatePlugin()
 {
     return new PluginTemplate();
 }
-
 ```
 </details>
 
+<details>
+  <summary><b>C</b></summary>
+
+Below is a very simple C plugin template
+```c
+#include "MeowPluginC.h"
+
+static PluginInfoC g_info =
+{
+    L"My Plugin",           // name
+    L"1.0.0",               // version 
+    L"MeowLoader Plugin"    // description
+};
+
+static MeowPluginC g_plugin;
+
+// LogMsg() wrapper
+static void LogMsg(const wchar_t* msg)
+{
+    if (g_plugin.log)
+    {
+        g_plugin.log(g_info.name, msg);
+    }
+}
+
+static void OnLoad(void)
+{
+    // code here runs when the plugin is loaded
+}
+
+static void OnTick(void)
+{
+    // code here runs every tick
+}
+
+static void OnEnable(void)
+{
+    // code here runs when the plugin is enabled
+}
+
+static void OnDisable(void)
+{
+    // code here runs when the plugin is disabled
+}
+
+static void OnShutdown(void)
+{
+    // code here runs when the plugin is unloaded
+}
+
+// factory function
+__declspec(dllexport)
+MeowPluginC* CreatePluginC(void)
+{
+    g_plugin.info = &g_info;
+
+    g_plugin.log = NULL;
+    g_plugin.subscribe = NULL;
+    g_plugin.unsubscribe = NULL;
+    g_plugin.publish = NULL;
+
+    g_plugin.OnLoad = OnLoad;
+    g_plugin.OnTick = OnTick;
+    g_plugin.OnEnable = OnEnable;
+    g_plugin.OnDisable = OnDisable;
+    g_plugin.OnShutdown = OnShutdown;
+
+    return &g_plugin;
+}
+```
+</details>
