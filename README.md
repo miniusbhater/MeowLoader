@@ -216,7 +216,7 @@ g_plugin.log(g_plugin.info->name, L"This is a log :3");
 
 ## Creating a plugin
 
-Plugins are implemnted as a single global instance of MeowPluginC  
+Plugins are implemented as a single global instance of MeowPluginC  
 Example :  
 ```c
 #include "MeowPluginC.h"
