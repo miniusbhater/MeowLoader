@@ -107,7 +107,7 @@ Plugins can also be Enabled, Disabled, Unloaded and Reloaded by clicking the **P
 ## Plugin info
 
 Every plugin must provide metadata through a PluginInfo structure.  
-Example (C++):
+Example:
 
 ```cpp
 PluginInfo infoData =
@@ -121,7 +121,7 @@ PluginInfo infoData =
 ## Logging
 
 Plugins can write messages to the log.  
-Example (C++):
+Example:
 
 ```cpp
 LogMsg(L"This is a log :3");
@@ -130,7 +130,7 @@ LogMsg(L"This is a log :3");
 ## Creating a plugin
 
 Create a class that derives from `MeowPlugin`.  
-Example (C++):
+Example:
 
 ```cpp
 class MyPlugin : public MeowPlugin
@@ -144,7 +144,7 @@ public:
 ```
 
 Export a factory function.  
-Example (C++):
+Example:
 
 ```cpp
 extern "C" __declspec(dllexport)
@@ -159,6 +159,106 @@ MeowPlugin* CreatePlugin()
 - Plugins must export `CreatePlugin()`.
 - All strings use UTF-16.
   </details>
+
+<details>
+  <summary><b>Basic info (C)</b></summary>
+
+ ## Lifecycle methods
+
+| Method | Description |
+|----------|-------------|
+| `OnLoad()` | Called when the plugin is loaded |
+| `OnTick()` | Called every 16ms |
+| `OnEnable()` | Called when the plugin is enabled with the enable button |
+| `OnDisable()` | Called when the plugin is disabled with the disable button |
+| `OnShutdown()` | Called when the plugin is unloaded |
+
+## Plugin info
+
+Every plugin must provide metadata through a PluginInfo structure.  
+Example:
+
+```c
+PluginInfoC infoData =
+    {
+        L"My Plugin",         // name
+        L"1.0.0",             // version
+        L"MeowLoader Plugin"  // description
+    };
+```
+
+## Logging
+
+Plugins can write messages to the log. 
+### Option 1
+Create a wrapper
+Example:
+
+```c
+static void LogMsg(const wchar_t* msg)
+{
+    if (g_plugin.log)
+    {
+        g_plugin.log(g_info.name, msg);
+    }
+}
+```
+Then you can do `LogMsg(L);` to create a log
+Example:
+```c
+LogMsg(L"This is a log :3");
+```
+
+### Option 2
+```c
+g_plugin.log(g_plugin.info->name, L"This is a log :3");
+```
+
+## Creating a plugin
+
+Plugins are implemnted as a single global instance of MeowPluginC
+Example :
+```c
+#include "MeowPluginC.h"
+
+static PluginInfoC g_info =
+{
+    L"My Plugin",
+    L"1.0.0",
+    L"MeowLoader Plugin"
+};
+
+static MeowPluginC g_plugin;
+```
+
+Export a factory function.  
+```c
+__declspec(dllexport)
+MeowPluginC* CreatePluginC(void)
+{
+    g_plugin.info = &g_info;
+
+    g_plugin.log = NULL;
+    g_plugin.subscribe = NULL;
+    g_plugin.unsubscribe = NULL;
+    g_plugin.publish = NULL;
+
+    g_plugin.OnLoad = OnLoad;
+    g_plugin.OnTick = OnTick;
+    g_plugin.OnEnable = OnEnable;
+    g_plugin.OnDisable = OnDisable;
+    g_plugin.OnShutdown = OnShutdown;
+
+    return &g_plugin;
+}
+```
+
+## Final notes
+
+- All strings use UTF-16.
+  </details>
+
+  
 
 #### Code Templates
 <details>
