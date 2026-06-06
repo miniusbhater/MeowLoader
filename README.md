@@ -231,7 +231,7 @@ static PluginInfoC g_info =
 static MeowPluginC g_plugin;
 ```
 
-Export a factory function.    
+Export <b>this</b> factory function.    
 ```c
 __declspec(dllexport)
 MeowPluginC* CreatePluginC(void)
