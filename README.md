@@ -176,7 +176,7 @@ MeowPlugin* CreatePlugin()
 ## Plugin info
 
 Every plugin must provide metadata through a PluginInfoC structure.    
-Example:
+Example:  
 
 ```c
 PluginInfoC infoData =
@@ -192,7 +192,7 @@ PluginInfoC infoData =
 Plugins can write messages to the log.   
 ### Option 1
 Create a wrapper  
-Example:
+Example:  
 
 ```c
 static void LogMsg(const wchar_t* msg)
@@ -203,8 +203,8 @@ static void LogMsg(const wchar_t* msg)
     }
 }
 ```
-Then you can do `LogMsg(L);` to create a log  
-Example:
+Then you can do `LogMsg(L"");` to create a log  
+Example:  
 ```c
 LogMsg(L"This is a log :3");
 ```
@@ -217,7 +217,7 @@ g_plugin.log(g_plugin.info->name, L"This is a log :3");
 ## Creating a plugin
 
 Plugins are implemnted as a single global instance of MeowPluginC  
-Example :
+Example :  
 ```c
 #include "MeowPluginC.h"
 
@@ -231,7 +231,7 @@ static PluginInfoC g_info =
 static MeowPluginC g_plugin;
 ```
 
-Export a factory function.  
+Export a factory function.    
 ```c
 __declspec(dllexport)
 MeowPluginC* CreatePluginC(void)
